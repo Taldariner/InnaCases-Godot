@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6rgmvbmcgj4e"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/skin_ui.gd" id="1_hpucu"]
+[ext_resource type="Texture2D" uid="uid://capokn0l06ql" path="res://Sprites/Skins/scarh_mentanol.png" id="1_jo47d"]
+[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender.bold.otf" id="2_ujhkq"]
+
+[node name="SkinUI" type="Control"]
+custom_minimum_size = Vector2(360, 248)
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.388889
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+script = ExtResource("1_hpucu")
+metadata/_edit_use_anchors_ = true
+
+[node name="SkinTexture" type="TextureRect" parent="."]
+layout_mode = 2
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -124.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jo47d")
+stretch_mode = 5
+
+[node name="SkinRarityColorRect" type="ColorRect" parent="SkinTexture"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 36.0
+grow_horizontal = 2
+color = Color(0.831373, 0, 0.831373, 1)
+
+[node name="SkinName" type="Label" parent="SkinTexture/SkinRarityColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_ujhkq")
+theme_override_font_sizes/font_size = 24
+text = "SCAR-H | MENTANOL"
+horizontal_alignment = 1
+vertical_alignment = 1

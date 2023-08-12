@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://dcbj6f8m6w1o1"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_pq10q"]
+[ext_resource type="Texture2D" uid="uid://d1gj21h60fern" path="res://Sprites/Skins/l85_gold.png" id="2_idrpc"]
+
+[resource]
+script = ExtResource("1_pq10q")
+skin_name = "L85 | Gold"
+skin_rarity = "Uncommon"
+skin_texture = ExtResource("2_idrpc")

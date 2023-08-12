@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr6b8juhrnycx"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/bottom_menu.gd" id="1_1e5rd"]
+[ext_resource type="Texture2D" uid="uid://b8kcuwy42e50k" path="res://Sprites/IconClicker.png" id="1_quqq2"]
+[ext_resource type="Texture2D" uid="uid://b3qb4d4tn750i" path="res://Sprites/ShopIcon.png" id="2_crqvq"]
+[ext_resource type="Texture2D" uid="uid://c8catxmx5bxwa" path="res://Sprites/IconInventory.png" id="3_53cme"]
+[ext_resource type="Texture2D" uid="uid://b3j4yfu1th4m8" path="res://Sprites/IconUpgrades.png" id="4_v1msh"]
+[ext_resource type="Texture2D" uid="uid://hqvrq1b1iqrq" path="res://Sprites/IconSettings.png" id="5_snnsv"]
+
+[node name="BottomMenu" type="Control"]
+layout_mode = 3
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -144.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_1e5rd")
+menu_buttons = Array[TextureButton]([null, null, null, null, null])
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.517184, 0.517184, 0.517184, 1)
+
+[node name="MenuButtonsContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="ButtonClicker" type="TextureButton" parent="MenuButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_quqq2")
+
+[node name="ButtonShop" type="TextureButton" parent="MenuButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("2_crqvq")
+
+[node name="ButtonInventory" type="TextureButton" parent="MenuButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("3_53cme")
+
+[node name="ButtonUpgrades" type="TextureButton" parent="MenuButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("4_v1msh")
+
+[node name="ButtonSettings" type="TextureButton" parent="MenuButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_snnsv")
+
+[connection signal="pressed" from="MenuButtonsContainer/ButtonClicker" to="." method="_on_button_clicker_pressed"]
+[connection signal="pressed" from="MenuButtonsContainer/ButtonShop" to="." method="_on_button_shop_pressed"]
+[connection signal="pressed" from="MenuButtonsContainer/ButtonInventory" to="." method="_on_button_inventory_pressed"]
+[connection signal="pressed" from="MenuButtonsContainer/ButtonUpgrades" to="." method="_on_button_upgrades_pressed"]
+[connection signal="pressed" from="MenuButtonsContainer/ButtonSettings" to="." method="_on_button_settings_pressed"]

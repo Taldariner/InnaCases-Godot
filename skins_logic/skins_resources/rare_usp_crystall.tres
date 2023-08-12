@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://4hxnbnijthfx"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_wfkes"]
+[ext_resource type="Texture2D" uid="uid://gi74v855w3p8" path="res://Sprites/Skins/hk_usp_crystall.png" id="2_5s6vj"]
+
+[resource]
+script = ExtResource("1_wfkes")
+skin_name = "HK USP | Crystall"
+skin_rarity = "Rare"
+skin_texture = ExtResource("2_5s6vj")

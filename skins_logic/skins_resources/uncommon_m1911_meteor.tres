@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://bcd5xwe46ffu1"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_tg5ol"]
+[ext_resource type="Texture2D" uid="uid://285vl8i8xhe1" path="res://Sprites/Skins/m1911_meteor.png" id="2_yyor6"]
+
+[resource]
+script = ExtResource("1_tg5ol")
+skin_name = "M1911 | Meteor"
+skin_rarity = "Uncommon"
+skin_texture = ExtResource("2_yyor6")

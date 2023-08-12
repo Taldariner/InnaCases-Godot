@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://xdvoa5xcfj8g"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_6hj0t"]
+[ext_resource type="Texture2D" uid="uid://bcssfnpryg5hm" path="res://Sprites/Skins/glock_paramedic.png" id="2_oipnr"]
+
+[resource]
+script = ExtResource("1_6hj0t")
+skin_name = "Glock-18 | Paramedic"
+skin_rarity = "Legendary"
+skin_texture = ExtResource("2_oipnr")

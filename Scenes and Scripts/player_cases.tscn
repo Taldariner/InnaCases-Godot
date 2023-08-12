@@ -1,0 +1,89 @@
+[gd_scene load_steps=22 format=3 uid="uid://by8umkm46mgl5"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/player_cases.gd" id="1_gt6oc"]
+[ext_resource type="PackedScene" uid="uid://bl7y5c018dfdi" path="res://Scenes and Scripts/case_ui.tscn" id="1_k0ip7"]
+[ext_resource type="Texture2D" uid="uid://c7r45b7ixpeff" path="res://Sprites/SpriteCaseAwakening.png" id="2_okuou"]
+[ext_resource type="Script" path="res://cases_logic/case_class.gd" id="3_uatr2"]
+[ext_resource type="Resource" uid="uid://h3bpjoafsjvf" path="res://skins_logic/skins_resources/uncommon_m4_woodland.tres" id="4_p0nwa"]
+[ext_resource type="Resource" uid="uid://dcbj6f8m6w1o1" path="res://skins_logic/skins_resources/uncommon_l85_gold.tres" id="5_4t2x3"]
+[ext_resource type="Resource" uid="uid://dxkjmyl3lhk0c" path="res://skins_logic/skins_resources/epic_deserteagle_ocsideflame.tres" id="6_rcod2"]
+[ext_resource type="Resource" uid="uid://bcd5xwe46ffu1" path="res://skins_logic/skins_resources/uncommon_m1911_meteor.tres" id="6_wxi8c"]
+[ext_resource type="Resource" uid="uid://lgq31rvv7mcf" path="res://skins_logic/skins_resources/uncommon_p90_zelenka.tres" id="7_si5uk"]
+[ext_resource type="Resource" uid="uid://cci82trxjmadj" path="res://skins_logic/skins_resources/epic_p90_nitech.tres" id="8_lb0i0"]
+[ext_resource type="Resource" uid="uid://bgy7gwt2ujhnt" path="res://skins_logic/skins_resources/uncommon_ak5_predator.tres" id="8_tbu8f"]
+[ext_resource type="Resource" uid="uid://e8qsg2wdunkm" path="res://skins_logic/skins_resources/epic_scarh_mentanol.tres" id="9_3fvye"]
+[ext_resource type="Resource" uid="uid://bs8mjkh448toh" path="res://skins_logic/skins_resources/rare_beretta_lazure.tres" id="9_36utn"]
+[ext_resource type="Resource" uid="uid://d2by1ktqglej5" path="res://skins_logic/skins_resources/legendary_ak74_adidas.tres" id="10_o6h3i"]
+[ext_resource type="Resource" uid="uid://4hxnbnijthfx" path="res://skins_logic/skins_resources/rare_usp_crystall.tres" id="10_po74y"]
+[ext_resource type="Resource" uid="uid://lclkpeaxfux5" path="res://skins_logic/skins_resources/rare_deagle_dragon.tres" id="11_776u7"]
+[ext_resource type="Resource" uid="uid://xdvoa5xcfj8g" path="res://skins_logic/skins_resources/legendary_glock18_paramedic.tres" id="11_q7e1w"]
+[ext_resource type="Resource" uid="uid://dumwex7ewqby3" path="res://skins_logic/skins_resources/rare_ak74_gilded.tres" id="12_dscw2"]
+[ext_resource type="Resource" uid="uid://d0cgu8wdn82li" path="res://skins_logic/skins_resources/special_m4_golderspirale.tres" id="12_yxv43"]
+[ext_resource type="PackedScene" uid="uid://dr6b8juhrnycx" path="res://Scenes and Scripts/bottom_menu.tscn" id="20_k748g"]
+
+[sub_resource type="Resource" id="Resource_dcaom"]
+script = ExtResource("3_uatr2")
+case_name = "Awakening Case"
+case_price = 100
+case_texture = ExtResource("2_okuou")
+skins = Array[Resource("res://skins_logic/skin_class.gd")]([ExtResource("4_p0nwa"), ExtResource("5_4t2x3"), ExtResource("6_wxi8c"), ExtResource("7_si5uk"), ExtResource("8_tbu8f"), ExtResource("9_36utn"), ExtResource("10_po74y"), ExtResource("11_776u7"), ExtResource("12_dscw2"), ExtResource("9_3fvye"), ExtResource("6_rcod2"), ExtResource("8_lb0i0"), ExtResource("11_q7e1w"), ExtResource("10_o6h3i"), ExtResource("12_yxv43")])
+
+[node name="PlayerCases" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gt6oc")
+avalible_cases = Array[ExtResource("3_uatr2")]([SubResource("Resource_dcaom")])
+
+[node name="VScrollBar" type="ScrollContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="VScrollBar"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="CaseUI" parent="VScrollBar/GridContainer" instance=ExtResource("1_k0ip7")]
+layout_mode = 2
+
+[node name="CaseUI2" parent="VScrollBar/GridContainer" instance=ExtResource("1_k0ip7")]
+visible = false
+layout_mode = 2
+
+[node name="CaseUI3" parent="VScrollBar/GridContainer" instance=ExtResource("1_k0ip7")]
+visible = false
+layout_mode = 2
+
+[node name="CaseUI4" parent="VScrollBar/GridContainer" instance=ExtResource("1_k0ip7")]
+visible = false
+layout_mode = 2
+
+[node name="CaseUI5" parent="VScrollBar/GridContainer" instance=ExtResource("1_k0ip7")]
+visible = false
+layout_mode = 2
+
+[node name="CaseUI6" parent="VScrollBar/GridContainer" instance=ExtResource("1_k0ip7")]
+visible = false
+layout_mode = 2
+
+[node name="CaseUI7" parent="VScrollBar/GridContainer" instance=ExtResource("1_k0ip7")]
+visible = false
+layout_mode = 2
+
+[node name="CaseUI8" parent="VScrollBar/GridContainer" instance=ExtResource("1_k0ip7")]
+visible = false
+layout_mode = 2
+
+[node name="BottomMenu" parent="." instance=ExtResource("20_k748g")]
+layout_mode = 1

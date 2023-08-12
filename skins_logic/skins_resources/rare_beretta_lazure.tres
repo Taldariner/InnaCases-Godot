@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://bs8mjkh448toh"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_laflq"]
+[ext_resource type="Texture2D" uid="uid://bawyuvsnn4ons" path="res://Sprites/Skins/beretta_lazure.png" id="2_4mh3e"]
+
+[resource]
+script = ExtResource("1_laflq")
+skin_name = "Beretta 92FS | Lazure"
+skin_rarity = "Rare"
+skin_texture = ExtResource("2_4mh3e")

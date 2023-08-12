@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://bktcq16rf3g13"]
+
+[ext_resource type="PackedScene" uid="uid://c6rgmvbmcgj4e" path="res://Scenes and Scripts/SkinUI.tscn" id="1_4l3de"]
+
+[node name="PlayerInventoryArea" type="ScrollContainer"]
+clip_contents = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 72.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+
+[node name="PlayerInventoryGrid" type="GridContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="SkinUI" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+layout_mode = 2
+
+[node name="SkinUI2" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+layout_mode = 2
+
+[node name="SkinUI3" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+layout_mode = 2
+
+[node name="SkinUI4" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+layout_mode = 2
+
+[node name="SkinUI5" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+layout_mode = 2
+
+[node name="SkinUI6" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+layout_mode = 2
+
+[node name="SkinUI7" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+layout_mode = 2
+
+[node name="SkinUI8" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+layout_mode = 2

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://h3bpjoafsjvf"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_37fgt"]
+[ext_resource type="Texture2D" uid="uid://derxrboyae7qj" path="res://Sprites/Skins/m4_woodland.png" id="2_mjpn7"]
+
+[resource]
+script = ExtResource("1_37fgt")
+skin_name = "M4 | Woodland"
+skin_rarity = "Uncommon"
+skin_texture = ExtResource("2_mjpn7")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://bgy7gwt2ujhnt"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_xbjve"]
+[ext_resource type="Texture2D" uid="uid://e8hofyw2rsds" path="res://Sprites/Skins/ak5_predator.png" id="2_j7wxx"]
+
+[resource]
+script = ExtResource("1_xbjve")
+skin_name = "Ak5 | Predator"
+skin_rarity = "Uncommon"
+skin_texture = ExtResource("2_j7wxx")

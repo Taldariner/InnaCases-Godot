@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://d0cgu8wdn82li"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_mkmdq"]
+[ext_resource type="Texture2D" uid="uid://uly3sh2ybarr" path="res://Sprites/Skins/m4_golden_spirale.png" id="2_djbne"]
+
+[resource]
+script = ExtResource("1_mkmdq")
+skin_name = "M4 | Golder Spirale"
+skin_rarity = "Special"
+skin_texture = ExtResource("2_djbne")

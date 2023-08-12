@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://e8qsg2wdunkm"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_os2l4"]
+[ext_resource type="Texture2D" uid="uid://capokn0l06ql" path="res://Sprites/Skins/scarh_mentanol.png" id="2_xegga"]
+
+[resource]
+script = ExtResource("1_os2l4")
+skin_name = "SCAR-H | Mentanol"
+skin_rarity = "Epic"
+skin_texture = ExtResource("2_xegga")

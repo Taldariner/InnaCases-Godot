@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://dd57c2qblt8vr"]
+
+[ext_resource type="PackedScene" uid="uid://cehus3rkfk47" path="res://Scenes and Scripts/test_skin_ui.tscn" id="1_7hji1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 2
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "sdadasddddddddddddddddddddddd"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "sdadasddddddddddddddddddddddd"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "sdadasddddddddddddddddddddddd"
+
+[node name="Button4" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "sdadasddddddddddddddddddddddd"
+
+[node name="Button5" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "sdadasddddddddddddddddddddddd"
+
+[node name="Button6" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "sdadasddddddddddddddddddddddd"
+
+[node name="Control" parent="GridContainer" instance=ExtResource("1_7hji1")]
+layout_mode = 2
+
+[node name="Control2" parent="GridContainer" instance=ExtResource("1_7hji1")]
+layout_mode = 2

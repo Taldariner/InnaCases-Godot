@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://dumwex7ewqby3"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_p5set"]
+[ext_resource type="Texture2D" uid="uid://crlijf2npx8jd" path="res://Sprites/Skins/ak74_gilding.png" id="2_xpwbq"]
+
+[resource]
+script = ExtResource("1_p5set")
+skin_name = "AK-74 | Gilding"
+skin_rarity = "Rare"
+skin_texture = ExtResource("2_xpwbq")

@@ -1,0 +1,235 @@
+[gd_scene load_steps=31 format=3 uid="uid://cx62lec7vblrh"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/player_inventory.gd" id="1_mxaid"]
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="2_qavxo"]
+[ext_resource type="Texture2D" uid="uid://bcssfnpryg5hm" path="res://Sprites/Skins/glock_paramedic.png" id="3_31qel"]
+[ext_resource type="Texture2D" uid="uid://dixr65aku3cvd" path="res://Sprites/Skins/glock_sunset.png" id="4_ew8ee"]
+[ext_resource type="Texture2D" uid="uid://capokn0l06ql" path="res://Sprites/Skins/scarh_mentanol.png" id="5_2hp0e"]
+[ext_resource type="Texture2D" uid="uid://bh3xl6wadvyyd" path="res://Sprites/player_levels/lavel_3.png" id="6_7u3to"]
+[ext_resource type="Resource" uid="uid://bgy7gwt2ujhnt" path="res://skins_logic/skins_resources/uncommon_ak5_predator.tres" id="6_ymyq3"]
+[ext_resource type="Resource" uid="uid://dcbj6f8m6w1o1" path="res://skins_logic/skins_resources/uncommon_l85_gold.tres" id="7_5c7lu"]
+[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender.bold.otf" id="7_ebnpe"]
+[ext_resource type="PackedScene" uid="uid://bktcq16rf3g13" path="res://Scenes and Scripts/test_scroll.tscn" id="8_d07cm"]
+[ext_resource type="Resource" uid="uid://h3bpjoafsjvf" path="res://skins_logic/skins_resources/uncommon_m4_woodland.tres" id="8_ucg76"]
+[ext_resource type="Resource" uid="uid://bcd5xwe46ffu1" path="res://skins_logic/skins_resources/uncommon_m1911_meteor.tres" id="9_ynr37"]
+[ext_resource type="Resource" uid="uid://lgq31rvv7mcf" path="res://skins_logic/skins_resources/uncommon_p90_zelenka.tres" id="10_p2joa"]
+[ext_resource type="Resource" uid="uid://dumwex7ewqby3" path="res://skins_logic/skins_resources/rare_ak74_gilded.tres" id="11_kqn0w"]
+[ext_resource type="Resource" uid="uid://bs8mjkh448toh" path="res://skins_logic/skins_resources/rare_beretta_lazure.tres" id="12_ocduy"]
+[ext_resource type="Resource" uid="uid://lclkpeaxfux5" path="res://skins_logic/skins_resources/rare_deagle_dragon.tres" id="13_skpk7"]
+[ext_resource type="Resource" uid="uid://4hxnbnijthfx" path="res://skins_logic/skins_resources/rare_usp_crystall.tres" id="14_bow5t"]
+[ext_resource type="Resource" uid="uid://dxkjmyl3lhk0c" path="res://skins_logic/skins_resources/epic_deserteagle_ocsideflame.tres" id="15_yafla"]
+[ext_resource type="Resource" uid="uid://cci82trxjmadj" path="res://skins_logic/skins_resources/epic_p90_nitech.tres" id="16_3w06g"]
+[ext_resource type="Resource" uid="uid://e8qsg2wdunkm" path="res://skins_logic/skins_resources/epic_scarh_mentanol.tres" id="17_h6bpv"]
+[ext_resource type="Resource" uid="uid://d2by1ktqglej5" path="res://skins_logic/skins_resources/legendary_ak74_adidas.tres" id="18_coenn"]
+[ext_resource type="Resource" uid="uid://xdvoa5xcfj8g" path="res://skins_logic/skins_resources/legendary_glock18_paramedic.tres" id="19_r78kv"]
+[ext_resource type="Resource" uid="uid://d0cgu8wdn82li" path="res://skins_logic/skins_resources/special_m4_golderspirale.tres" id="20_7gq23"]
+[ext_resource type="PackedScene" uid="uid://dr6b8juhrnycx" path="res://Scenes and Scripts/bottom_menu.tscn" id="24_wjxcb"]
+
+[sub_resource type="Resource" id="Resource_6qq25"]
+script = ExtResource("2_qavxo")
+skin_name = "Durka"
+skin_rarity = "Common"
+skin_texture = ExtResource("3_31qel")
+
+[sub_resource type="Resource" id="Resource_qw4ex"]
+script = ExtResource("2_qavxo")
+skin_name = "Durka 2"
+skin_rarity = "Uncommon"
+skin_texture = ExtResource("3_31qel")
+
+[sub_resource type="Resource" id="Resource_ex3ob"]
+script = ExtResource("2_qavxo")
+skin_name = "Durka 3"
+skin_rarity = "Rare"
+skin_texture = ExtResource("4_ew8ee")
+
+[sub_resource type="Resource" id="Resource_260q2"]
+script = ExtResource("2_qavxo")
+skin_name = "Durka 4"
+skin_rarity = "Epic"
+skin_texture = ExtResource("4_ew8ee")
+
+[sub_resource type="Resource" id="Resource_4pebx"]
+script = ExtResource("2_qavxo")
+skin_name = "Durka 5"
+skin_rarity = "Legendary"
+skin_texture = ExtResource("5_2hp0e")
+
+[sub_resource type="Resource" id="Resource_4p71o"]
+script = ExtResource("2_qavxo")
+skin_name = "Durka 6"
+skin_rarity = "Special"
+skin_texture = ExtResource("5_2hp0e")
+
+[node name="PlayerInventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mxaid")
+player_user_skins_array = Array[ExtResource("2_qavxo")]([SubResource("Resource_6qq25"), SubResource("Resource_qw4ex"), SubResource("Resource_ex3ob"), SubResource("Resource_260q2"), SubResource("Resource_4pebx"), SubResource("Resource_4p71o"), ExtResource("6_ymyq3"), ExtResource("7_5c7lu"), ExtResource("8_ucg76"), ExtResource("9_ynr37"), ExtResource("10_p2joa"), ExtResource("11_kqn0w"), ExtResource("12_ocduy"), ExtResource("13_skpk7"), ExtResource("14_bow5t"), ExtResource("15_yafla"), ExtResource("16_3w06g"), ExtResource("17_h6bpv"), ExtResource("18_coenn"), ExtResource("19_r78kv"), ExtResource("20_7gq23"), ExtResource("20_7gq23")])
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+anchor_mode = 0
+ignore_rotation = false
+enabled = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 72.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VSplitContainer" type="VSplitContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 72.0
+grow_horizontal = 2
+split_offset = 72
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" parent="." instance=ExtResource("8_d07cm")]
+layout_mode = 1
+anchors_preset = -1
+offset_bottom = -144.0
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="TopPanel" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.517647, 0.517647, 0.517647, 1)
+
+[node name="TextureRect" type="TextureRect" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -28.0
+offset_right = 64.0
+offset_bottom = 28.0
+grow_vertical = 2
+texture = ExtResource("6_7u3to")
+
+[node name="Label" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 72.0
+offset_right = 393.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_ebnpe")
+theme_override_font_sizes/font_size = 48
+text = "Taldariner"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -354.0
+offset_right = -72.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_ebnpe")
+theme_override_font_sizes/font_size = 48
+text = "300
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="TopPanel2" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2(0, 72)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 10
+
+[node name="ColorRect2" type="ColorRect" parent="TopPanel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.517647, 0.517647, 0.517647, 1)
+
+[node name="TextureRect" type="TextureRect" parent="TopPanel2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 8.0
+offset_top = -28.0
+offset_right = 64.0
+offset_bottom = 28.0
+grow_vertical = 2
+texture = ExtResource("6_7u3to")
+
+[node name="Label" type="Label" parent="TopPanel2"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 72.0
+offset_right = 393.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_ebnpe")
+theme_override_font_sizes/font_size = 48
+text = "Taldariner"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="TopPanel2"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -354.0
+offset_right = -72.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("7_ebnpe")
+theme_override_font_sizes/font_size = 48
+text = "300
+"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="BottomMenu" parent="." instance=ExtResource("24_wjxcb")]
+layout_mode = 1

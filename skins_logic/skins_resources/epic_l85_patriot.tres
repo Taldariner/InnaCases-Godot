@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://c5u81fneuye7o"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_s8etm"]
+[ext_resource type="Texture2D" uid="uid://capokn0l06ql" path="res://Sprites/Skins/scarh_mentanol.png" id="2_0vfws"]
+
+[resource]
+script = ExtResource("1_s8etm")
+skin_name = "L85 | Patriot"
+skin_rarity = "Epic"
+skin_texture = ExtResource("2_0vfws")

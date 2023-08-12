@@ -1,0 +1,55 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl7y5c018dfdi"]
+
+[ext_resource type="Script" path="res://Scenes and Scripts/case_ui.gd" id="1_bfsjn"]
+[ext_resource type="Texture2D" uid="uid://dl3nj8dy0l1dn" path="res://Sprites/sample-case.png" id="1_qtdfo"]
+[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender.bold.otf" id="3_f8vb4"]
+
+[node name="CaseUI" type="Control"]
+custom_minimum_size = Vector2(360, 248)
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 0.275556
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+script = ExtResource("1_bfsjn")
+metadata/_edit_use_anchors_ = true
+
+[node name="SkinTexture" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 248.0
+grow_horizontal = 2
+texture = ExtResource("1_qtdfo")
+stretch_mode = 3
+
+[node name="CaseName" type="Label" parent="SkinTexture"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_f8vb4")
+theme_override_font_sizes/font_size = 24
+text = "Awakening Case"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CasePrice" type="Label" parent="SkinTexture"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -31.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_f8vb4")
+theme_override_font_sizes/font_size = 24
+text = "100 $"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

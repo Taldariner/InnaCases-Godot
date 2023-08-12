@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://d2by1ktqglej5"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_sp1kt"]
+[ext_resource type="Texture2D" uid="uid://bcux87lnrt2i8" path="res://Sprites/Skins/ak74_adidas.png" id="2_8j32i"]
+
+[resource]
+script = ExtResource("1_sp1kt")
+skin_name = "AK-74| Adidas"
+skin_rarity = "Legendary"
+skin_texture = ExtResource("2_8j32i")

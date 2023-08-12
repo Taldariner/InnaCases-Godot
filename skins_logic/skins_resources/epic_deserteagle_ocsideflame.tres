@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponSkin" load_steps=3 format=3 uid="uid://dxkjmyl3lhk0c"]
+
+[ext_resource type="Script" path="res://skins_logic/skin_class.gd" id="1_5w5dj"]
+[ext_resource type="Texture2D" uid="uid://d11t51qt52x8h" path="res://Sprites/Skins/deagle_oxyd_blaze.png" id="2_xctl5"]
+
+[resource]
+script = ExtResource("1_5w5dj")
+skin_name = "Desert Eagle | Oxide Flame"
+skin_rarity = "Epic"
+skin_texture = ExtResource("2_xctl5")
