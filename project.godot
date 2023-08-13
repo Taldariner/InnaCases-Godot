@@ -14,6 +14,10 @@ config/name="Case Simulator"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
+[autoload]
+
+PlayerManager="*res://Scenes and Scripts/global_player_manager.gd"
+
 [display]
 
 window/size/viewport_width=720

@@ -22,25 +22,33 @@ theme_override_constants/v_separation = 0
 columns = 2
 
 [node name="SkinUI" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+visible = false
 layout_mode = 2
 
 [node name="SkinUI2" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+visible = false
 layout_mode = 2
 
 [node name="SkinUI3" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+visible = false
 layout_mode = 2
 
 [node name="SkinUI4" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+visible = false
 layout_mode = 2
 
 [node name="SkinUI5" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+visible = false
 layout_mode = 2
 
 [node name="SkinUI6" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+visible = false
 layout_mode = 2
 
 [node name="SkinUI7" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+visible = false
 layout_mode = 2
 
 [node name="SkinUI8" parent="PlayerInventoryGrid" instance=ExtResource("1_4l3de")]
+visible = false
 layout_mode = 2

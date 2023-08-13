@@ -9,5 +9,8 @@ func update(case : WeaponSkinsCase):
 
 func _on_gui_input(event):
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
-		var new_skin = case.generate_skin()
-		print(new_skin.skin_name + " - " + new_skin.skin_rarity)
+		if(PlayerManager.player_money >= case.case_price):
+			PlayerManager.player_money -= case.case_price
+			var new_skin = case.generate_skin()
+			print(new_skin.skin_name + " - " + new_skin.skin_rarity)
+			PlayerManager.player_skins.append(new_skin)

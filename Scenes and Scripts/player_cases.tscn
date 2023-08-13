@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://by8umkm46mgl5"]
+[gd_scene load_steps=23 format=3 uid="uid://by8umkm46mgl5"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/player_cases.gd" id="1_gt6oc"]
 [ext_resource type="PackedScene" uid="uid://bl7y5c018dfdi" path="res://Scenes and Scripts/case_ui.tscn" id="1_k0ip7"]
@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://xdvoa5xcfj8g" path="res://skins_logic/skins_resources/legendary_glock18_paramedic.tres" id="11_q7e1w"]
 [ext_resource type="Resource" uid="uid://dumwex7ewqby3" path="res://skins_logic/skins_resources/rare_ak74_gilded.tres" id="12_dscw2"]
 [ext_resource type="Resource" uid="uid://d0cgu8wdn82li" path="res://skins_logic/skins_resources/special_m4_golderspirale.tres" id="12_yxv43"]
+[ext_resource type="PackedScene" uid="uid://ltrwlwkv8m4x" path="res://Scenes and Scripts/top_panel.tscn" id="19_ygx3q"]
 [ext_resource type="PackedScene" uid="uid://dr6b8juhrnycx" path="res://Scenes and Scripts/bottom_menu.tscn" id="20_k748g"]
 
 [sub_resource type="Resource" id="Resource_dcaom"]
@@ -38,11 +39,16 @@ grow_vertical = 2
 script = ExtResource("1_gt6oc")
 avalible_cases = Array[ExtResource("3_uatr2")]([SubResource("Resource_dcaom")])
 
+[node name="TopPanel" parent="." instance=ExtResource("19_ygx3q")]
+layout_mode = 1
+
 [node name="VScrollBar" type="ScrollContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 72.0
+offset_bottom = -144.0
 grow_horizontal = 2
 grow_vertical = 2
 horizontal_scroll_mode = 0
@@ -87,3 +93,7 @@ layout_mode = 2
 
 [node name="BottomMenu" parent="." instance=ExtResource("20_k748g")]
 layout_mode = 1
+anchors_preset = 12
+offset_top = 0.0
+grow_horizontal = 1
+grow_vertical = 1

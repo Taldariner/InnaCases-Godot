@@ -12,15 +12,10 @@ var skin_ui_template = preload("res://Scenes and Scripts/SkinUI.tscn")
 	#"Special": Color(0.2, 1.0, 0.7, 0.8)
 }
 
-@export var player_user_skins_array : Array[WeaponSkin]
+#@export var player_user_skins_array : Array[WeaponSkin]
 
 func _ready():
-	for skin in player_user_skins_array:
-		var new_skin_ui = skin_ui_template.instantiate()
-		print(skin.skin_rarity)
-		new_skin_ui.update(skin.skin_name, rarity_colors_dictionary[skin.skin_rarity], skin.skin_texture)
-		$ScrollContainer/PlayerInventoryGrid.add_child(new_skin_ui)
-	for skin in player_user_skins_array:
+	for skin in PlayerManager.player_skins:
 		var new_skin_ui = skin_ui_template.instantiate()
 		print(skin.skin_rarity)
 		new_skin_ui.update(skin.skin_name, rarity_colors_dictionary[skin.skin_rarity], skin.skin_texture)
