@@ -61,6 +61,7 @@ theme_override_constants/v_separation = 0
 columns = 2
 
 [node name="CaseUI" parent="VScrollBar/GridContainer" instance=ExtResource("1_k0ip7")]
+visible = false
 layout_mode = 2
 
 [node name="CaseUI2" parent="VScrollBar/GridContainer" instance=ExtResource("1_k0ip7")]
@@ -93,7 +94,5 @@ layout_mode = 2
 
 [node name="BottomMenu" parent="." instance=ExtResource("20_k748g")]
 layout_mode = 1
-anchors_preset = 12
-offset_top = 0.0
 grow_horizontal = 1
 grow_vertical = 1

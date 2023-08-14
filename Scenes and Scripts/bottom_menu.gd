@@ -18,11 +18,11 @@ func _on_button_inventory_pressed():
 
 func _on_button_upgrades_pressed():
 	button_clicked(3) # Replace with function body.
-	#get_tree().change_scene_to_file()
+	get_tree().change_scene_to_file("res://Scenes and Scripts/player_upgrades.tscn")
 
 func _on_button_settings_pressed():
 	button_clicked(4) # Replace with function body.
-	#get_tree().change_scene_to_file()
+	get_tree().change_scene_to_file("res://Scenes and Scripts/player_settings.tscn")
 
 func button_clicked(button_index : int) -> void:
 	#$MenuButtonsContainer.get_children()[active_button_index].texture_normal.a = 0.5

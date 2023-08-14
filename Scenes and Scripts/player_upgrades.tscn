@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dq4xo3y10kyld"]
+
+[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender.bold.otf" id="2_k24yw"]
+[ext_resource type="PackedScene" uid="uid://ltrwlwkv8m4x" path="res://Scenes and Scripts/top_panel.tscn" id="19_8xrv5"]
+[ext_resource type="PackedScene" uid="uid://dr6b8juhrnycx" path="res://Scenes and Scripts/bottom_menu.tscn" id="21_xdnlh"]
+
+[node name="PlayerCases" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopPanel" parent="." instance=ExtResource("19_8xrv5")]
+layout_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 72.0
+offset_bottom = -144.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_k24yw")
+theme_override_font_sizes/font_size = 72
+text = "Currentrly not 
+developed.
+Sorry :("
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomMenu" parent="." instance=ExtResource("21_xdnlh")]
+layout_mode = 1
+grow_horizontal = 1
+grow_vertical = 1

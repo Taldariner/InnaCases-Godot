@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://ch0jttgud5o0v"]
+
+[ext_resource type="PackedScene" uid="uid://ltrwlwkv8m4x" path="res://Scenes and Scripts/top_panel.tscn" id="1_k0x6y"]
+[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender.bold.otf" id="2_7ag7l"]
+[ext_resource type="PackedScene" uid="uid://dr6b8juhrnycx" path="res://Scenes and Scripts/bottom_menu.tscn" id="3_s0cmu"]
+
+[node name="PlayerCases" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopPanel" parent="." instance=ExtResource("1_k0x6y")]
+layout_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 72.0
+offset_bottom = -144.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7ag7l")
+theme_override_font_sizes/font_size = 36
+text = "	
+    Innacases 0.1.0 Beta
+	
+    Developers:
+    Taldariner
+
+    Artists:
+    Alex Brown"
+
+[node name="BottomMenu" parent="." instance=ExtResource("3_s0cmu")]
+layout_mode = 1
+grow_horizontal = 1
+grow_vertical = 1

@@ -1,12 +1,23 @@
 extends Node
 
-var player_name : String = "Player"
+class_name GlobalPlayerManager
 
-var player_money : int = 0
-var player_skins : Array[WeaponSkin] = []
+var result
+var save_game_path = "user://game_save.tres"
+var global_player_data #: GlobalPlayerData = load("res://Scenes and Scripts/global_player_data.gd").new()
+		
+func _ready():
+	global_player_data = GlobalPlayerData.new()
+	#player_data_manager.load_player_data()
+	if ResourceLoader.exists(save_game_path):
+		#return load(save_game_path)
+		print("Load game save")
+		global_player_data = ResourceLoader.load(save_game_path)
+	else:
+		#return null
+		print("New game save")
+	print(global_player_data.player_money)
 
 func save_player_data():
-	pass
-
-func load_player_data():
-	pass
+	result = ResourceSaver.save(global_player_data, save_game_path)
+	assert(result == OK)

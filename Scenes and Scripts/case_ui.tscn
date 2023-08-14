@@ -1,20 +1,18 @@
 [gd_scene load_steps=4 format=3 uid="uid://bl7y5c018dfdi"]
 
 [ext_resource type="Script" path="res://Scenes and Scripts/case_ui.gd" id="1_bfsjn"]
-[ext_resource type="Texture2D" uid="uid://dl3nj8dy0l1dn" path="res://Sprites/sample-case.png" id="1_qtdfo"]
+[ext_resource type="Texture2D" uid="uid://c7r45b7ixpeff" path="res://Sprites/SpriteCaseAwakening.png" id="2_y7f8a"]
 [ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender.bold.otf" id="3_f8vb4"]
 
 [node name="CaseUI" type="Control"]
-custom_minimum_size = Vector2(360, 248)
+custom_minimum_size = Vector2(360, 296)
 layout_mode = 3
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 0.275556
 grow_horizontal = 2
-grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 script = ExtResource("1_bfsjn")
-metadata/_edit_use_anchors_ = true
 
 [node name="SkinTexture" type="TextureRect" parent="."]
 layout_mode = 1
@@ -22,32 +20,37 @@ anchors_preset = 10
 anchor_right = 1.0
 offset_bottom = 248.0
 grow_horizontal = 2
-texture = ExtResource("1_qtdfo")
-stretch_mode = 3
+texture = ExtResource("2_y7f8a")
+stretch_mode = 5
 
-[node name="CaseName" type="Label" parent="SkinTexture"]
+[node name="CaseName" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = -1
+anchor_top = 1.0
 anchor_right = 1.0
-offset_bottom = 31.0
+anchor_bottom = 1.0
+offset_top = -84.0
+offset_bottom = -48.0
 grow_horizontal = 2
+grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_f8vb4")
 theme_override_font_sizes/font_size = 24
 text = "Awakening Case"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="CasePrice" type="Label" parent="SkinTexture"]
+[node name="CasePrice" type="Label" parent="."]
 layout_mode = 1
-anchors_preset = 12
+anchors_preset = -1
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -31.0
+offset_top = -48.0
+offset_bottom = -0.000396729
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_f8vb4")
-theme_override_font_sizes/font_size = 24
+theme_override_font_sizes/font_size = 36
 text = "100 $"
 horizontal_alignment = 1
 vertical_alignment = 1
