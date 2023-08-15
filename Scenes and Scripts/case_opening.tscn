@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3u7yipetxm21"]
+[gd_scene load_steps=4 format=3 uid="uid://d3u7yipetxm21"]
 
 [ext_resource type="Script" path="res://cases_logic/case_opening.gd" id="1_wxk1m"]
 [ext_resource type="Texture2D" uid="uid://deqcrkpj6oloq" path="res://Sprites/cubuk.png" id="2_wcqx1"]
+[ext_resource type="PackedScene" uid="uid://c6rgmvbmcgj4e" path="res://Scenes and Scripts/SkinUI.tscn" id="3_kh3nn"]
 
 [node name="Case Opening" type="Control"]
 layout_mode = 3
@@ -45,18 +46,21 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -3.0
-offset_top = -125.0
+offset_top = -124.0
 offset_right = 3.0
-offset_bottom = 125.0
+offset_bottom = 124.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_wcqx1")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.09
 autostart = true
 
 [node name="Panel" type="Panel" parent="."]
+visible = false
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -88,6 +92,18 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(125, 125)
 stretch_mode = 5
+
+[node name="SkinUI" parent="Panel" instance=ExtResource("3_kh3nn")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -124.0
+offset_right = 180.0
+offset_bottom = 124.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Panel/Button" to="." method="_on_button_pressed"]

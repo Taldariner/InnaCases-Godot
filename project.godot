@@ -22,7 +22,6 @@ PlayerManager="*res://Scenes and Scripts/global_player_manager.gd"
 
 window/size/viewport_width=720
 window/size/viewport_height=900
-window/size/mode=2
 window/stretch/mode="2d"
 window/stretch/aspect="keep_width"
 

@@ -5,7 +5,7 @@ var skin_ui = preload("res://Scenes and Scripts/SkinUI.tscn")
 
 var increase_value = 0
 var index_number = 2
-var high_limit = 270
+var high_limit = 360
 var speed = 40
 var case_stopped = false
 
@@ -15,6 +15,7 @@ var dropped_skins : Array[WeaponSkin] = []
 @onready var panel = $Panel
 @onready var case_container = $"Case Scroll Container"
 @onready var item_container = $"Case Scroll Container/Item Container"
+@onready var item_cursor = $"Item Cursor"
 
 func start_case_opening():
 	case_container.get_h_scroll_bar().scale.x = 0
@@ -26,10 +27,10 @@ func start_case_opening():
 		
 func add_skin(new_skin : WeaponSkin):
 	var new_skin_ui = skin_ui.instantiate()
-	new_skin_ui.update(new_skin.skin_name, new_skin.skin_texture)
+	new_skin_ui.update(new_skin)
 	
 	#texture_rects.append(img)
-	texture_rects.append(new_skin.skin_texture)
+	#texture_rects.append(new_skin.skin_texture)
 	item_container.add_child(new_skin_ui)
 
 func _process(delta):
@@ -45,8 +46,19 @@ func _on_timer_timeout():
 		speed -= 0.5
 	elif speed <= 0:
 		case_stopped = true
-		panel.get_node("TextureRect").texture = texture_rects[index_number]
-		PlayerManager.global_player_data.player_skins.append(dropped_skins[index_number])
+		
+		print(index_number)
+		print(item_container.global_position.x)
+		print(item_cursor.global_position.x)
+		var needed_skin = (item_cursor.global_position.x - item_container.global_position.x)/370
+		
+		$Panel/SkinUI.update(dropped_skins[needed_skin])
+		
+		#for skin in dropped_skins:
+		#	print(skin.skin_name)
+		
+		PlayerManager.global_player_data.player_skins.append(dropped_skins[needed_skin])
+		PlayerManager.save_player_data()
 		$Timer.stop()
 		panel.show()
 
