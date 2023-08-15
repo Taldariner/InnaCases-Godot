@@ -1,38 +1,33 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=7 format=3 uid="uid://dcsmgdg6swq5c"]
 
-[ext_resource path="res://Sprites/sample-case.png" type="Texture2D" id=1]
-[ext_resource path="res://Scenes and Scripts/Case.gd" type="Script" id=2]
-[ext_resource path="res://Sprites/mor.png" type="Texture2D" id=3]
-[ext_resource path="res://Sprites/sari.png" type="Texture2D" id=4]
-[ext_resource path="res://Sprites/kirmizi.png" type="Texture2D" id=5]
-[ext_resource path="res://Sprites/mavi.png" type="Texture2D" id=6]
+[ext_resource type="Texture2D" uid="uid://dl3nj8dy0l1dn" path="res://Sprites/sample-case.png" id="1"]
+[ext_resource type="Script" path="res://Scenes and Scripts/Case.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://cjy1wotqc5gma" path="res://Sprites/mor.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://e4p57khmu07f" path="res://Sprites/sari.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://cjeneg2v01scg" path="res://Sprites/kirmizi.png" id="5"]
+[ext_resource type="Texture2D" uid="uid://b2cs82h0p86sb" path="res://Sprites/mavi.png" id="6"]
 
 [node name="Case" type="VBoxContainer"]
+anchors_preset = -1
 anchor_right = 0.242188
 anchor_bottom = 0.345
 offset_bottom = -24.0
 theme_override_constants/separation = 5
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": true
-}
-blue_items = [ ExtResource( 6 ) ]
-purple_items = [ ExtResource( 3 ) ]
-red_items = [ ExtResource( 5 ) ]
-special_items = [ ExtResource( 4 ) ]
+script = ExtResource("2")
+blue_items = Array[Texture2D]([ExtResource("6")])
+purple_items = Array[Texture2D]([ExtResource("3")])
+red_items = Array[Texture2D]([ExtResource("5")])
+special_items = Array[Texture2D]([ExtResource("4")])
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 248.0
-offset_bottom = 183.0
-texture = ExtResource( 1 )
+layout_mode = 2
+texture = ExtResource("1")
 
 [node name="Button" type="Button" parent="."]
-offset_left = 83.0
-offset_top = 188.0
-offset_right = 164.0
-offset_bottom = 208.0
+layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_colors/font_color = Color( 0.47451, 1, 0, 1 )
+theme_override_colors/font_color = Color(0.47451, 1, 0, 1)
 text = "Open Case"
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
