@@ -20,8 +20,7 @@ func start_case_opening():
 		var next_skin = case.generate_skin()
 		dropped_skins.append(next_skin)
 		add_skin(next_skin)
-	
-		
+
 func add_skin(new_skin : WeaponSkin):
 	var new_skin_ui = skin_ui.instantiate()
 	new_skin_ui.update(new_skin)
