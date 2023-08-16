@@ -10,9 +10,9 @@ config_version=5
 
 [application]
 
-config/name="Case Simulator"
+config/name="InnaCases Godot"
 run/main_scene="res://Scenes and Scripts/player_clicker.tscn"
-config/features=PackedStringArray("4.0")
+config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [autoload]
@@ -32,5 +32,6 @@ pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
-environment/defaults/default_environment="res://default_env.tres"
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="mobile"
+environment/defaults/default_environment="res://default_env.tres"
