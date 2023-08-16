@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5g70i6yca24b"]
 
-[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender.bold.otf" id="1_qle73"]
+[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender_bold.otf" id="1_qle73"]
 
 [sub_resource type="GDScript" id="GDScript_csrr7"]
 script/source = "extends Control

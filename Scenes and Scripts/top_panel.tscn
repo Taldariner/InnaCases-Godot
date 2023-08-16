@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes and Scripts/top_panel.gd" id="1_3si73"]
 [ext_resource type="Texture2D" uid="uid://bh3xl6wadvyyd" path="res://Sprites/player_levels/lavel_3.png" id="2_us4rk"]
-[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender.bold.otf" id="3_oudys"]
+[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender_bold.otf" id="3_uk4sq"]
 [ext_resource type="Texture2D" uid="uid://b3qb4d4tn750i" path="res://Sprites/ShopIcon.png" id="4_ky1he"]
 
 [node name="TopPanel" type="Control"]
@@ -41,7 +41,7 @@ anchor_bottom = 1.0
 offset_left = 72.0
 offset_right = 393.0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_oudys")
+theme_override_fonts/font = ExtResource("3_uk4sq")
 theme_override_font_sizes/font_size = 48
 text = "Taldariner"
 vertical_alignment = 1
@@ -56,7 +56,7 @@ offset_left = -354.0
 offset_right = -72.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("3_oudys")
+theme_override_fonts/font = ExtResource("3_uk4sq")
 theme_override_font_sizes/font_size = 48
 text = "300
 "

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes and Scripts/case_ui.gd" id="1_bfsjn"]
 [ext_resource type="Texture2D" uid="uid://c7r45b7ixpeff" path="res://Sprites/SpriteCaseAwakening.png" id="2_y7f8a"]
-[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender.bold.otf" id="3_f8vb4"]
+[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender_bold.otf" id="3_f8vb4"]
 
 [node name="CaseUI" type="Control"]
 custom_minimum_size = Vector2(360, 296)

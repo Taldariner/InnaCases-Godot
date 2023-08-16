@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dq4xo3y10kyld"]
 
-[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender.bold.otf" id="2_k24yw"]
+[ext_resource type="FontFile" uid="uid://ygkw8nutfli2" path="res://Fonts/bender_bold.otf" id="2_k24yw"]
 [ext_resource type="PackedScene" uid="uid://ltrwlwkv8m4x" path="res://Scenes and Scripts/top_panel.tscn" id="19_8xrv5"]
 [ext_resource type="PackedScene" uid="uid://dr6b8juhrnycx" path="res://Scenes and Scripts/bottom_menu.tscn" id="21_xdnlh"]
 

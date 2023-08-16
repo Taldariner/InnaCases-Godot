@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://ygkw8nutfli2"
-path="res://.godot/imported/bender.bold.otf-d580e7505d215d81bd6c89ca2a483cba.fontdata"
+path="res://.godot/imported/bender_bold.otf-2112f39d8ae93eaf54d4564e1518604d.fontdata"
 
 [deps]
 
-source_file="res://Fonts/bender.bold.otf"
-dest_files=["res://.godot/imported/bender.bold.otf-d580e7505d215d81bd6c89ca2a483cba.fontdata"]
+source_file="res://Fonts/bender_bold.otf"
+dest_files=["res://.godot/imported/bender_bold.otf-2112f39d8ae93eaf54d4564e1518604d.fontdata"]
 
 [params]
 
