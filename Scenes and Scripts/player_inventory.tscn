@@ -14,15 +14,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_mxaid")
 
-[node name="TopPanel" parent="." instance=ExtResource("2_3ewi3")]
-layout_mode = 1
-
 [node name="ScrollContainer" parent="." instance=ExtResource("8_d07cm")]
 layout_mode = 1
 anchors_preset = -1
 offset_bottom = -144.0
 horizontal_scroll_mode = 0
 vertical_scroll_mode = 3
+
+[node name="TopPanel" parent="." instance=ExtResource("2_3ewi3")]
+layout_mode = 1
 
 [node name="BottomMenu" parent="." instance=ExtResource("24_wjxcb")]
 layout_mode = 1

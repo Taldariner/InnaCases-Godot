@@ -1,15 +1,12 @@
 extends Control
 
 var case : WeaponSkinsCase
+
 var skin_ui = preload("res://Scenes and Scripts/SkinUI.tscn")
 
-var increase_value = 0
-var index_number = 2
-var high_limit = 360
-var speed = 40
+var speed = 64
 var case_stopped = false
 
-var texture_rects = []
 var dropped_skins : Array[WeaponSkin] = []
 
 @onready var panel = $Panel
@@ -35,21 +32,18 @@ func add_skin(new_skin : WeaponSkin):
 
 func _process(delta):
 	if not case_stopped:
-		increase_value += 1 * speed
-		case_container.scroll_horizontal = increase_value
-		if case_container.scroll_horizontal > high_limit:
-			index_number += 1
-			high_limit += 260
-			
+		#increase_value += 1 * speed
+		case_container.scroll_horizontal += 1 * speed
+
 func _on_timer_timeout():
 	if speed > 0 and not case_stopped:
 		speed -= 0.5
 	elif speed <= 0:
 		case_stopped = true
 		
-		print(index_number)
-		print(item_container.global_position.x)
-		print(item_cursor.global_position.x)
+		#print(index_number)
+		#print(item_container.global_position.x)
+		#print(item_cursor.global_position.x)
 		var needed_skin = (item_cursor.global_position.x - item_container.global_position.x)/370
 		
 		$Panel/SkinUI.update(dropped_skins[needed_skin])

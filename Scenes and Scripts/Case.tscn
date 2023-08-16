@@ -1,11 +1,45 @@
-[gd_scene load_steps=7 format=3 uid="uid://dcsmgdg6swq5c"]
+[gd_scene load_steps=7 format=3 uid="uid://dctl1krq5tk74"]
 
-[ext_resource type="Texture2D" uid="uid://dl3nj8dy0l1dn" path="res://Sprites/sample-case.png" id="1"]
-[ext_resource type="Script" path="res://Scenes and Scripts/Case.gd" id="2"]
-[ext_resource type="Texture2D" uid="uid://cjy1wotqc5gma" path="res://Sprites/mor.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://e4p57khmu07f" path="res://Sprites/sari.png" id="4"]
-[ext_resource type="Texture2D" uid="uid://cjeneg2v01scg" path="res://Sprites/kirmizi.png" id="5"]
-[ext_resource type="Texture2D" uid="uid://b2cs82h0p86sb" path="res://Sprites/mavi.png" id="6"]
+[sub_resource type="GDScript" id="GDScript_lr2jp"]
+script/source = "extends VBoxContainer
+
+var case_opening = preload(\"res://Scenes and Scripts/CaseSystem.tscn\")
+
+@export var blue_items : Array[Texture2D]
+@export var purple_items : Array[Texture2D] 
+@export var red_items : Array[Texture2D] 
+@export var special_items : Array[Texture2D]  
+
+var item_list = {}
+
+func _ready():
+	item_list = {
+	\"blue_items\": blue_items,
+	\"purple_items\": purple_items,
+	\"red_items\": red_items,
+	\"special_items\": special_items
+	}
+
+func _on_Button_pressed():
+	var opening_scene = case_opening.instantiate()
+	opening_scene.item_list = item_list
+	get_tree().get_root().add_child(opening_scene)
+"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bq7cy"]
+load_path = "res://.godot/imported/mavi.png-3e5d6978e33cfd36d6260dc25db18b19.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ycrbf"]
+load_path = "res://.godot/imported/mor.png-3af9d7c0d23169b00edffac5e08e2ad1.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lmrrl"]
+load_path = "res://.godot/imported/kirmizi.png-8a05e27a3916f44cf46c4b0777121838.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_q7bed"]
+load_path = "res://.godot/imported/sari.png-5ac68c9aa6a1e1bcebfb558f20f723dc.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ghvex"]
+load_path = "res://.godot/imported/sample-case.png-660ceba0ce259db8f203c9cd4ed6847f.ctex"
 
 [node name="Case" type="VBoxContainer"]
 anchors_preset = -1
@@ -13,15 +47,15 @@ anchor_right = 0.242188
 anchor_bottom = 0.345
 offset_bottom = -24.0
 theme_override_constants/separation = 5
-script = ExtResource("2")
-blue_items = Array[Texture2D]([ExtResource("6")])
-purple_items = Array[Texture2D]([ExtResource("3")])
-red_items = Array[Texture2D]([ExtResource("5")])
-special_items = Array[Texture2D]([ExtResource("4")])
+script = SubResource("GDScript_lr2jp")
+blue_items = Array[Texture2D]([SubResource("CompressedTexture2D_bq7cy")])
+purple_items = Array[Texture2D]([SubResource("CompressedTexture2D_ycrbf")])
+red_items = Array[Texture2D]([SubResource("CompressedTexture2D_lmrrl")])
+special_items = Array[Texture2D]([SubResource("CompressedTexture2D_q7bed")])
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
-texture = ExtResource("1")
+texture = SubResource("CompressedTexture2D_ghvex")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2
